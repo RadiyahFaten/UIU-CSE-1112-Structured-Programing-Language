@@ -1,0 +1,17 @@
+#include<stdio.h>
+int main()
+{
+    int n;
+    scanf("%d", &n);
+
+    int a[n];
+    for (int i = 0; i < n; i++) scanf("%d", &a[i]);
+
+    //right shift by 1
+    int temp = a[ n - 1];
+    for (int i = n - 1; i >= 1 ; i--)
+        a[i + 1] = a[i];
+        a[0] = temp;
+
+     for (int i = 0; i < n; i++) printf("%d ", a[i]);
+}
